@@ -5,7 +5,8 @@
 
 bool positions_are_equal(const Position *a, const Position *b)
 {
-    return (a != NULL && b != NULL && a->x == b->x && a->y == b->y);
+    assert(a && b);
+    return a->x == b->x && a->y == b->y;
 }
 
 Position get_position()
